@@ -39,7 +39,7 @@ function componentToHex(c) {
 function getComplementBrightness(color){
     var colorRGB=getRGB(color);
     var brightnessComplement=colorRGB.map((value)=>{
-        return 255-value;
+        return (value+128)%255;
     });
     var hexValue="#";
     brightnessComplement.forEach((value)=>{
